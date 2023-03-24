@@ -1,0 +1,12 @@
+{% extends "dBNew.html" %}
+{% block content %}
+<h1>Add tasks to list</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Add</button>
+<br>
+    <br>
+   <button> <a class="" href="{% url 'view' %}" role="">View tasks</a> </button>
+</form>
+{% endblock %}

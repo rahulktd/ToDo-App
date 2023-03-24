@@ -1,0 +1,18 @@
+{% extends 'dBNew.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center display-4">Update ToDo</h1>
+        </div>
+        <div class="col-md-12">
+            <form method="POST" >
+                {% csrf_token %}
+                {{ form }}
+                <h1>Hello</h1>
+                <input type="submit" class="btn btn-dark btn-block" value="Update">
+            </form>
+        </div>
+    </div>
+</div>
+<!--{% endblock %}-->
