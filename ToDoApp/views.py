@@ -6,7 +6,7 @@ from ToDoApp.models import ToDo
 
 # Create your views here.
 def NewOne(request):
-    return render(request, 'LandingPage.html')
+    return render(request, 'home.html')
 
 
 def dash(request):
