@@ -1,0 +1,43 @@
+{% extends 'dBNew.html' %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      #button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      #new-task-button, #completed-tasks-button {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        flex-grow: 1;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+  {% block content %}
+    <h1>Todo App</h1>
+    <div id="button-container">
+      <a href="{% url 'addData' %}"><button id="new-task-button">Add New Task</button></a>
+      <a href="{% url 'view' %}"><button id="completed-tasks-button">View Completed Tasks</button></a>
+    </div>
+  {% endblock %}
+  </body>
+</html>
